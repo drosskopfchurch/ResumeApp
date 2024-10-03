@@ -88,6 +88,39 @@ public static class Skills
         Started: new DateTime(2015, 5, 1),
         Ended: null
     );
+    public static Skill YMLPipelines = new Skill(
+        Code: "YML",
+        Name: "YML Pipelines",
+        Description: "I have been using YML pipelines for a while now with Azure Dev Ops, I am pretty comfortable with them and creating templates.",
+        Rating: 4,
+        Started: new DateTime(2020, 5, 1),
+        Ended: null
+    );
+    public static Skill AzureDevops = new Skill(
+        Code: "DevOps",
+        Name: "Azure DevOps",
+        Description: "I am familiar with Azure Devops, creating boards, adding tests, managing code, etc..",
+        Rating: 4,
+        Started: new DateTime(2018, 5, 1),
+        Ended: null
+    );
+    public static Skill Github = new Skill(
+        Code: "Github",
+        Name: "Github",
+        Description: "I use Github, but not quite an expert on all the features and capabilities.",
+        Rating: 3,
+        Started: new DateTime(2020, 5, 1),
+        Ended: null
+    );
+    public static Skill Git = new Skill(
+        Code: "Git",
+        Name: "Git",
+        Description: "I have been using Git for a while, I fairly comfortable with it. I am very familiar with gitflow",
+        Rating: 4,
+        Started: new DateTime(2015, 5, 1),
+        Ended: null
+    );
+    
     public static Skill[] All()
     {
         return new[]
@@ -102,7 +135,9 @@ public static class Skills
         Blazor,
         Redis,
         Javascript,
-        CSS
+        CSS,
+        YMLPipelines,
+        AzureDevops
     };
     }
 
