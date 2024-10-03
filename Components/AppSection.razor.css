@@ -1,0 +1,20 @@
+.container {
+    background-color: rgba(0, 18, 0, 0.7);
+    padding: 16px;
+    margin: 32px auto;
+    box-shadow: 2px 2px 5px 0 rgb(0, 255, 81);
+    color: rgb(156, 188, 172);
+    max-width: 800px;
+}
+.content{
+    padding: 16px;
+}
+
+hr {
+    color: rgb(0, 255, 81);
+    box-shadow: 2px 2px 5px 0 rgb(0, 255, 81);
+}
+
+h2 {
+    text-shadow: 1px 1px 2px black, 0 0 1em green, 0 0 0.2em greenyellow;
+}

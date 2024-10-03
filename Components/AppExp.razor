@@ -1,0 +1,19 @@
+<AppCard>
+<div>@(Data.Name) | <span>@(Data.Role)</span></div>
+ <div>@(Data.Company)</div>
+ <p>@(Data.Description)</p>
+ <ul>
+    @foreach(var point in Data.Points){
+        <li>@(point)</li>
+    } 
+ </ul>
+ @foreach(var tech in Data.TechStack)
+ {
+     <AppTag>@(tech)</AppTag>
+ }
+</AppCard>
+
+@code {
+    [Parameter]
+    public Experience Data { get; set; }
+}

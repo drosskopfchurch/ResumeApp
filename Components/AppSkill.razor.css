@@ -1,0 +1,27 @@
+div{
+    background-color: rgba(0,10,10,0.8);
+    margin: 8px 16px;
+    padding: 4px;
+
+}
+p {
+    display: none;
+}
+
+.rating_3 {
+    width: 70%;
+    background-color: rgba(7, 1, 57, 0.75);
+    border: 1px solid rgba(13, 0, 129, 1.0);
+}
+
+.rating_4 {
+    width: 80%;
+    background-color: rgba(57, 28, 1, 0.75);
+    border: 1px solid rgba(148, 73, 2, 0.75);
+}
+
+.rating_5 {
+    width: 90%;
+    background-color: rgba(1, 57, 8, 0.75);
+    border: 1px solid rgba(3, 162, 24, 0.75);
+}

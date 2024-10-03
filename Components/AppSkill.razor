@@ -1,0 +1,8 @@
+<div class="rating_@(Data.Rating)">@(Data.Name) | <span>@(Data.Years) Years</span></div>
+<p class="hide">@(Data.Description)</p>
+
+
+@code {
+    [Parameter]
+    public Skill Data { get; set; }
+}

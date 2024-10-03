@@ -1,0 +1,40 @@
+﻿@page "/"
+@using ResumeApp.Components
+@using ResumeApp.Components.Matrix
+
+<PageTitle>David Rosskopf</PageTitle>
+
+<AppSection Title="About Me">
+    <h4>Short History</h4>
+    <p>My passion for technology started when my father bought my first computer when I was 12.  I quickly learned to break, troubleshoot, and enhance computers.   In my teens I was fortunate to have a neighbore who needed a website, and paid me to build him one.  Having little knowledge, but a few tools, I built 2 websites and earned my first $500.  In my early carrier I found small businesses that needed a technology specialist. In my 20's I got a job as tech support for a small software company.  I learned everything I could, and eventually they advanced me to Quality Assurance. This is when I really started to get into coding. I then continued to build my skillset adding new technologies, building awesome tools, and eventually became a Software Engineer.</p>
+
+    <h4>Why Hire Me?</h4>
+    <p>I have few super powers that I think makes me a great hire:</p>
+    <ul>
+        <li>Quick Learner</li>
+        <li>Natural Problem Solver</li>
+        <li>Incredibly Honest</li>
+        <li>Team Player</li>
+        <li>Passionate</li>
+    </ul>
+</AppSection>
+
+<AppSection Title="Experiences">
+    @foreach (var exp in Experiences.All)
+    {
+        <AppExp Data="exp" />
+    }
+</AppSection>
+
+<AppSection Title="Skills">
+    <div class="graph-container">
+        <div class="line-50">Good</div>
+        <div class="line-75">Great</div>
+        <div class="line-95">Expert</div>
+        <h4>Ratings</h4>
+        @foreach (var skill in Skills.All())
+        {
+            <AppSkill Data="skill" />
+        }
+    </div>
+</AppSection>
