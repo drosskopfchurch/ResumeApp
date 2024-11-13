@@ -76,3 +76,13 @@ a,
 .blazor-error-boundary::after {
     content: "An error has occurred."
 }
+
+@media print {
+    .exp * {
+        display: block;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        visibility: visible;
+        font-size: .2rem;
+    }
+}

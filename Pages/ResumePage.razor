@@ -1,0 +1,57 @@
+@page "/Resume"
+@using ResumeApp.Components
+@using ResumeApp.Components.Resume
+<div class="page">
+    <div class="left-section">
+        <h1>@profile.Name</h1>
+        <div class="contact-info">@profile.Email</div>
+        <div class="contact-info">@profile.Phone</div>
+        @* <div class="about-me">@profile.AboutMe</div> *@
+        <div class="key-attributes">
+            Qualities:
+            <ul>
+                @foreach (var att in profile.Attributes)
+                {
+                    <li>@att</li>
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="right-section">
+        <div class="split">
+            <div class="section">
+                <h2>About Me</h2>
+                <p>@profile.AboutMe</p>
+            </div>
+            <div class="section">
+                <h2>Skills</h2>
+                @foreach (var skill in Skills.All())
+                {
+                    <ResumeSkill Data="skill" />
+                }
+            </div>
+        </div>
+        <div>
+            <h2>Experiences</h2>
+            @foreach (var exp in Experiences.All)
+            {
+                <ResumeExp Data="exp" />
+            }
+        </div>
+        <div>
+            <h2>References</h2>
+            <div class="references">
+                @foreach (var reference in References.All())
+                {
+                    <ResumeRef Reference="reference" />
+                }
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+@code {
+    private Profile profile = new Profile();
+}

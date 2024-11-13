@@ -1,54 +1,73 @@
 ﻿@page "/"
 @using ResumeApp.Components
 @using ResumeApp.Components.Matrix
+@using ResumeApp.Components.Resume
 
 <PageTitle>David Rosskopf</PageTitle>
+<MatrixBackground>
+    <Header>David Rosskopf | drosskopf@gmail.com</Header>
+    <AppSection Title="About Me">
+        <h4>Short History</h4>
+        <p>My interest in technology began at the age of 12, when my father introduced me to my first computer. This
+            early
+            exposure fueled my curiosity, and I quickly developed skills in troubleshooting, repairing, and enhancing
+            computer systems. As a teenager, I was fortunate to gain hands-on experience when a neighbor hired me to
+            build a
+            website. With limited knowledge but a determination to learn, I successfully created two websites, earning
+            my
+            first $500 and solidifying my passion for web development.</p>
 
-<AppSection Title="About Me">
-    <h4>Short History</h4>
-    <p>My interest in technology began at the age of 12, when my father introduced me to my first computer. This early
-        exposure fueled my curiosity, and I quickly developed skills in troubleshooting, repairing, and enhancing
-        computer systems. As a teenager, I was fortunate to gain hands-on experience when a neighbor hired me to build a
-        website. With limited knowledge but a determination to learn, I successfully created two websites, earning my
-        first $500 and solidifying my passion for web development.</p>
+        <p>In the early stages of my career, I sought out small businesses in need of technical expertise, providing
+            them
+            with IT solutions and support. In my 20s, I joined a small software company as a tech support specialist.
+            Eager
+            to expand my knowledge, I immersed myself in learning the intricacies of software development. This
+            dedication
+            led to a promotion to Quality Assurance, where I honed my coding skills and deepened my understanding of
+            software engineering.</p>
 
-    <p>In the early stages of my career, I sought out small businesses in need of technical expertise, providing them
-        with IT solutions and support. In my 20s, I joined a small software company as a tech support specialist. Eager
-        to expand my knowledge, I immersed myself in learning the intricacies of software development. This dedication
-        led to a promotion to Quality Assurance, where I honed my coding skills and deepened my understanding of
-        software engineering.</p>
+        <p>As my career progressed, I continued to build upon my technical expertise, embracing new technologies and
+            developing innovative tools. Today, I am a Software Engineer, committed to delivering high-quality solutions
+            and
+            continuously refining my skill set in an ever-evolving industry.</p>
 
-    <p>As my career progressed, I continued to build upon my technical expertise, embracing new technologies and
-        developing innovative tools. Today, I am a Software Engineer, committed to delivering high-quality solutions and
-        continuously refining my skill set in an ever-evolving industry.</p>
+        <h4>Why Hire Me?</h4>
+        <p>I have few super powers that I think makes me a great hire:</p>
+        <ul>
+            <li>Quick Learner</li>
+            <li>Natural Problem Solver</li>
+            <li>Incredibly Honest</li>
+            <li>Team Player</li>
+            <li>Passionate</li>
+        </ul>
+    </AppSection>
 
-    <h4>Why Hire Me?</h4>
-    <p>I have few super powers that I think makes me a great hire:</p>
-    <ul>
-        <li>Quick Learner</li>
-        <li>Natural Problem Solver</li>
-        <li>Incredibly Honest</li>
-        <li>Team Player</li>
-        <li>Passionate</li>
-    </ul>
-</AppSection>
-
-<AppSection Title="Experiences">
-    @foreach (var exp in Experiences.All)
-    {
-        <AppExp Data="exp" />
-    }
-</AppSection>
-
-<AppSection Title="Skills">
-    <div class="graph-container">
-        <div class="line-50">Good</div>
-        <div class="line-75">Great</div>
-        <div class="line-95">Expert</div>
-        <h4>Ratings</h4>
-        @foreach (var skill in Skills.All())
+    <AppSection Title="Experiences">
+        @foreach (var exp in Experiences.All)
         {
-            <AppSkill Data="skill" />
+            <AppExp Data="exp" />
         }
-    </div>
-</AppSection>
+    </AppSection>
+
+    <AppSection Title="Skills">
+        <div class="graph-container">
+            <div class="line-50">Good</div>
+            <div class="line-75">Great</div>
+            <div class="line-95">Expert</div>
+            <h4>Ratings</h4>
+            @foreach (var skill in Skills.All())
+            {
+                <AppSkill Data="skill" />
+            }
+        </div>
+    </AppSection>
+
+    <AppSection Title="References">
+            <div class="references">
+                @foreach (var reference in References.All())
+                {
+                    <ResumeRef Reference="reference" />
+                }
+            </div>
+    </AppSection>
+</MatrixBackground>

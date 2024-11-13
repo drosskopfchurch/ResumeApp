@@ -1,0 +1,68 @@
+.exp {
+    padding-bottom: 10px;    
+}
+
+.exp-title {
+    font-size: .5rem;
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+
+.exp-company {
+    font-size: .3rem;
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+
+.exp-desc {
+    font-size: .3rem;
+}
+
+.exp-tech {
+    font-size: .3rem;
+    padding-right: 2px;
+    font-weight: 600;
+}
+
+.role {
+    font-size: .4rem;
+    font-weight: 300;
+}
+
+.exp-techs {
+    margin-top: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+/* Add this to your CSS file */
+.exp-points ul {
+    list-style-type: none;
+    padding: 0;
+    margin-block-start: .3em;
+    margin-block-end: .3rem;
+    padding-inline-start: 10px;
+    
+}
+
+.exp-points li {
+    font-size: .3rem;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.exp-points li::before {
+    content: '•';
+    color: #000000;
+    margin-right: 5px;
+}
+
+@media print {
+    .exp, .exp * {
+        /* break-inside: avoid;
+        page-break-inside: avoid; */
+        page-break-before: always;
+        visibility: visible;
+    }
+}

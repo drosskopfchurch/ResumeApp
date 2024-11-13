@@ -1,0 +1,17 @@
+<div class="reference">
+    <div class="image">
+        <img src=@(Reference.LinkedInPicture) alt=@(Reference.Name) />
+    </div>
+    <div>
+        <div class="name">@(Reference.Name)</div>
+        <div>@(Reference.Title)</div>
+        <div>linkedin: @(Reference.LinkedInHref.Replace("https://www.linkedin.com/in/",""))</div>
+    </div>
+</div>
+
+@code{
+    [Parameter]
+    public Reference? Reference { get; set; }
+
+
+}

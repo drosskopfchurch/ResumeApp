@@ -120,7 +120,14 @@ public static class Skills
         Started: new DateTime(2015, 5, 1),
         Ended: null
     );
-    
+    public static Skill WebDriver = new Skill(
+        Code: "WebDriver",
+        Name: "WebDriver",
+        Description: "I have beeing using webdriver for years, I am very comfortable with it.",
+        Rating: 4,
+        Started: new DateTime(2015, 5, 1),
+        Ended: null
+    );
     public static Skill[] All()
     {
         return new[]
@@ -137,7 +144,10 @@ public static class Skills
         Javascript,
         CSS,
         YMLPipelines,
-        AzureDevops
+        AzureDevops,
+        Github,
+        Git,
+        WebDriver
     };
     }
 

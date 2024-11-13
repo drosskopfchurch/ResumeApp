@@ -1,0 +1,27 @@
+<div class="exp">
+    <div class="exp-title">@(Data.Name) | <span class="role">@(Data.Role)</span></div>
+    <div class="exp-company">@(Data.Company)</div>
+    <div class="exp-desc">@(Data.Description)</div>
+    @if (Data.Points.Any())
+    {
+        <div class="exp-points">
+            <ul>
+                @foreach (var point in Data.Points)
+                {
+                    <li>@(point)</li>
+                }
+            </ul>
+        </div>
+    }
+    <div class="exp-techs">
+        @foreach (var tech in Data.TechStack)
+        {
+            <span class="exp-tech">@(tech) | </span>
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public Experience Data { get; set; }
+}

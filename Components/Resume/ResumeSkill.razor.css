@@ -1,0 +1,25 @@
+div{
+    background-color:white;
+    margin: 2px 4px;
+    padding: 1px;
+    font-size: .3rem;
+
+}
+p {
+    display: none;
+}
+
+.rating_3 {
+    width: 70%;
+    border: 1px solid rgba(13, 0, 129, 1.0);
+}
+
+.rating_4 {
+    width: 80%;
+    border: 1px solid rgba(148, 73, 2, 0.75);
+}
+
+.rating_5 {
+    width: 90%;
+    border: 1px solid rgba(3, 162, 24, 0.75);
+}
